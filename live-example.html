@@ -1,0 +1,66 @@
+<html>
+<head>
+  <title>Arcs on Google Maps</title>
+  <link type="text/css" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700">
+  <style type="text/css">
+    .gm-style .gm-style-mtc label,
+    .gm-style .gm-style-mtc div {
+      font-weight: 400
+    }
+    .gm-style .gm-style-cc span,
+    .gm-style .gm-style-cc a,
+    .gm-style .gm-style-mtc div {
+      font-size: 10px
+    }
+    @media print {
+      .gm-style .gmnoprint,
+      .gmnoprint {
+        display: none
+      }
+    }
+
+    @media screen {
+      .gm-style .gmnoscreen,
+      .gmnoscreen {
+        display: none
+      }
+    }
+    html,
+    body,
+    #map-canvas {
+      height: 100%;
+      width: 100%;
+      margin: 0px;
+      padding: 0px
+    }
+  </style>
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="googlebot" content="noindex, nofollow">
+  <!-- Required Javascript Libraries to generate the Arc -->
+  <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+  <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?sensor=false&amp;libraries=geometry,places&amp;ext=.js"></script>
+  <script type="text/javascript" charset="UTF-8" src="https://oss.maxcdn.com/libs/snapsvg/0.1.0/snap.svg-min.js"></script>
+  <!-- End Required Javascript Libraries to generate the Arc -->
+  <!-- Main Arc generation script -->
+  <script type="text/javascript" charset="UTF-8" src="js/arclib.js"></script>
+  <script type="text/javascript" charset="UTF-8" src="js/live-example.js"></script>
+  <!-- Main Arc generation script -->
+</head>
+
+<body>
+  <div id="map-canvas" style="border: 2px solid rgb(56, 114, 172); position: relative; overflow: hidden;">
+  </div>
+
+  <script>
+    // tell the embed parent frame the height of the content
+    if (window.parent && window.parent.parent) {
+      window.parent.parent.postMessage(["resultsFrame", {
+        height: document.body.getBoundingClientRect().height,
+        slug: "None"
+      }], "*")
+    }
+  </script>
+</body>
+
+</html>
