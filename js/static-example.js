@@ -21,7 +21,7 @@ function initialize(){
 
   //FIT MAP TO BOUNDARIES
   map.fitBounds(bounds);
-
+/*
   var localMarker = new CustomArc({
     pointA: new google.maps.LatLng(-25.2744,133.7751),
     pointB: new google.maps.LatLng(1.3521,103.8198),
@@ -51,7 +51,17 @@ function initialize(){
     mode: 'fade',
     map: map
   });
+  */
 
+  var localMarker3 = new CustomArc({
+    pointA: new google.maps.LatLng(-30.5595,22.9375),
+    pointB: new google.maps.LatLng(51.9194,19.1451),
+    duration: 5000,
+    lineColor: '#fff983',
+    glowColor: '#0085ff',
+    mode: 'none',
+    map: map
+  });
 }
 
 //****************************************************************************

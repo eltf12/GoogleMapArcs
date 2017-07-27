@@ -63,63 +63,63 @@ CustomArc.prototype.draw = function() {
     //Sets the size of the SVG box and the x,y positioning
 
     if(point2.x == point1.x && point2.y < point1.y){
-      //console.log('=<');
+      console.log('=<');
       rotationDirection = -1;
       curveDirection = -1;
       rectPoint = ['0 - xyOffset','e.y - xyOffset'];
       maxPoint = ['c.x', 'e.y - xyOffset * 5'];
     }
     else if(point2.x < point1.x && point2.y < point1.y){
-      //console.log('<<');
+      console.log('<<');
       rotationDirection = -1;
       curveDirection = -1;
-      rectPoint = ['e.x - xyOffset','c.y - xyOffset'];
-      maxPoint = ['- e.x', 'c.y - xyOffset * 5'];
+      rectPoint = ['e.x - xyOffset','c.y - xyOffset * 10'];
+      maxPoint = ['- e.x + xyOffset * 5', 'c.y - xyOffset * 15'];
     }
     else if(point2.x < point1.x && point2.y == point1.y){
-      //console.log('<=');
+      console.log('<=');
       rotationDirection = -1;
       curveDirection = -1;
       rectPoint = ['e.x - xyOffset','c.y - xyOffset'];
       maxPoint = ['- e.x', 'c.y - xyOffset * 5'];
     }
     else if (point2.x < point1.x && point2.y > point1.y){
-      //console.log('<>');
+      console.log('<>');
       rotationDirection = -1;
       curveDirection = -1;
-      rectPoint = ['e.x - xyOffset','0 - xyOffset * 2'];
-      maxPoint = ['- e.x', 'e.y'];
+      rectPoint = ['e.x - xyOffset * 5','0 - xyOffset * 10'];
+      maxPoint = ['- e.x + xyOffset * 5', 'e.y + xyOffset * 10'];
     }
     else if (point2.x == point1.x && point2.y > point1.y){
-      //console.log('=>');
+      console.log('=>');
       rotationDirection = -1;
       curveDirection = 1;
       rectPoint = ['0 - xyOffset','0 - xyOffset'];
       maxPoint = ['c.x', 'e.y'];
     }
     else if (point2.x > point1.x && point2.y > point1.y){
-      //console.log('>>');
+      console.log('>>');
       rotationDirection = -1;
       curveDirection = 1;
-      rectPoint = ['0 - xyOffset','0 - xyOffset * 5'];
+      rectPoint = ['0 - xyOffset','0 - xyOffset * 10'];
       maxPoint = ['e.x', 'e.y + xyOffset * 10'];
     }
     else if (point2.x > point1.x && point2.y == point1.y){
-      //console.log('>=');
+      console.log('>=');
       rotationDirection = -1;
       curveDirection = 1;
       rectPoint = ['0 - xyOffset','c.y - xyOffset * 5'];
       maxPoint = ['e.x', 'c.y - xyOffset * 10'];
     }
     else if (point2.x > point1.x && point2.y < point1.y){
-      //console.log('><');
+      console.log('><');
       rotationDirection = -1;
       curveDirection = 1;
-      rectPoint = ['0 - xyOffset','e.y - xyOffset * 5'];
-      maxPoint = ['e.x', '- e.y + xyOffset * 10'];
+      rectPoint = ['0 - xyOffset * 5','e.y - xyOffset * 5'];
+      maxPoint = ['e.x + xyOffset * 10', '- e.y + xyOffset * 10'];
     }
     else if (point2.x == point1.x && point2.y == point1.y){
-      //console.log('==');
+      console.log('==');
       rotationDirection = -1;
       curveDirection = 1;
       rectPoint = ['0','0'];
