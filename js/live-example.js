@@ -28,12 +28,9 @@ function randomColor(){
   return '#'+Math.floor(Math.random()*16777215).toString(16);
 }
 
-function randomLat(){
-  return Math.random() * 90 * Math.pow(-1, Math.round(Math.random() * 10));
-}
-
-function randomLng(){
-  return Math.random() * 180 * Math.pow(-1, Math.round(Math.random() * 10));
+function randomLocation(){
+  var randomPointer = Math.round(Math.random() * countrylatlng.length);
+  return countrylatlng[randomPointer];
 }
 
 
@@ -58,9 +55,11 @@ function initialize(){
     var randomNumberOfLines = Math.round(Math.random() * 10); //between 1 - 10
 
     for(var x = 1; x <= randomNumberOfLines; x++){
+      var randomLocation1 = randomLocation();
+      var randomLocation2 = randomLocation();
       var randomMarker = new CustomArc({
-        pointA: new google.maps.LatLng(randomLat(),randomLng()),
-        pointB: new google.maps.LatLng(randomLat(),randomLng()),
+        pointA: new google.maps.LatLng(randomLocation1[0],randomLocation1[1]),
+        pointB: new google.maps.LatLng(randomLocation2[0],randomLocation2[1]),
         duration: 5000,
         lineColor: randomColor(),
         glowColor: randomColor(),
