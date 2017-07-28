@@ -83,6 +83,7 @@ var localMarker = new CustomArc({
 ## Examples
 Run this folder in a localhost http server to see the arcs in action:
 `static-example.html` - features 3 types of animated arcs
+`live-example.html` - continuous drawing of random arcs
 
 ## Requirement
 - a valid Google Map API key, [*get one its free anyway*](https://developers.google.com/maps/documentation/javascript/get-api-key)
