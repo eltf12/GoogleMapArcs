@@ -1,4 +1,4 @@
-# GoogleMapArcs
+# Animate Arcs on Google Map
 This is a simple example of how to implement animated arcs into Google Map connecting point A to B.
 
 ## GoogleMapArcs made to be **_Easy_** to work with
